@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juegos Desbloqueados</title>
+    <style>
+        body {
+            background-color: #111;
+            color: #fff;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #00ffcc;
+        }
+        #searchBar {
+            display: block;
+            margin: 0 auto 30px auto;
+            padding: 10px;
+            width: 80%;
+            max-width: 500px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: none;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .game {
+            background: #1c1c1c;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px #00ffcc44;
+            transition: transform 0.2s ease;
+        }
+        .game:hover {
+            transform: scale(1.05);
+        }
+        .game img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+        }
+        .game-title {
+            padding: 10px;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+    <script>
+        function searchGames() {
+            let input = document.getElementById("searchBar").value.toLowerCase();
+            let games = document.getElementsByClassName("game");
+            for (let game of games) {
+                let title = game.querySelector(".game-title").textContent.toLowerCase();
+                game.style.display = title.includes(input) ? "" : "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>🎮 Juegos Desbloqueados</h1>
+    <input type="text" id="searchBar" onkeyup="searchGames()" placeholder="Buscar juego...">
+    <div class="gallery">
+
+        <a href="https://superliquidsoccer.github.io/" target="_blank" class="game">
+            <img src="https://img.itch.zone/aW1nLzEyNjQ1ODQ2LnBuZw==/original/BzvOvC.png" alt="Super Liquid Soccer">
+            <div class="game-title">Super Liquid Soccer</div>
+        </a>
+
+        <a href="https://blockpost.io/" target="_blank" class="game">
+            <img src="https://blockpost.io/img/ogimage.jpg" alt="Blockpost">
+            <div class="game-title">Blockpost</div>
+        </a>
+
+        <a href="https://slopegame.io/" target="_blank" class="game">
+            <img src="https://slopegame.io/images/logo.png" alt="Slope">
+            <div class="game-title">Slope</div>
+        </a>
+
+        <a href="https://2048game.com/" target="_blank" class="game">
+            <img src="https://2048game.com/images/2048-logo.png" alt="2048">
+            <div class="game-title">2048</div>
+        </a>
+
+        <a href="https://agar.io/" target="_blank" class="game">
+            <img src="https://agar.io/images/favicon.png" alt="Agar.io">
+            <div class="game-title">Agar.io</div>
+        </a>
+
+        <a href="https://slither.io/" target="_blank" class="game">
+            <img src="https://slither.io/s/img/logo_og.png" alt="Slither.io">
+            <div class="game-title">Slither.io</div>
+        </a>
+
+        <a href="https://www.retrogames.cc/embed/12052-ms-pac-man.html" target="_blank" class="game">
+            <img src="https://upload.wikimedia.org/wikipedia/en/8/84/Ms._Pac-Man_arcade_game_flyer.png" alt="Ms. Pac-Man">
+            <div class="game-title">Ms. Pac-Man</div>
+        </a>
+
+        <a href="https://v6p9d9t4.ssl.hwcdn.net/html/3139849/index.html" target="_blank" class="game">
+            <img src="https://img.itch.zone/aW1nLzU1MjU5MzYucG5n/original/2XyZBt.png" alt="HTML5 Shooter">
+            <div class="game-title">HTML5 Shooter</div>
+        </a>
+
+        <a href="https://italianbrainrotclicker.netlify.app/" target="_blank" class="game">
+            <img src="https://i.ibb.co/NT7qgKH/italianbrainrot.png" alt="Italian Brainrot Clicker">
+            <div class="game-title">Italian Brainrot Clicker</div>
+        </a>
+
+        <a href="https://1v1.lol/old" target="_blank" class="game">
+            <img src="https://1v1.lol/images/metaimg.png" alt="1v1.LOL (antiguo)">
+            <div class="game-title">1v1 LOL Antiguo</div>
+        </a>
+
+        <a href="https://www.miniplay.com/embed/footchinko" target="_blank" class="game">
+            <img src="https://play-lh.googleusercontent.com/YeD3zBdEGloGIszHFkaX8m-6j5hUGJbw7mE6k6YzZtTYqKvhxlWR_qNc-DtZCUOJe6E=w240-h480-rw" alt="Foot Chinko">
+            <div class="game-title">Foot Chinko</div>
+        </a>
+
+        <a href="https://html5.gamedistribution.com/rvvASMiV/4949cf0cfa9c4d40ba681c47c066cefc/index.html" target="_blank" class="game">
+            <img src="https://img.gamedistribution.com/9a557c0b0cbd4e28a0bbd1c38c3a00ed-512x384.jpeg" alt="Darts Pro">
+            <div class="game-title">Darts Pro</div>
+        </a>
+
+        <a href="https://capybaraclicker.github.io/" target="_blank" class="game">
+            <img src="https://capybaraclicker.github.io/icon.png" alt="Capibara Clicker">
+            <div class="game-title">Capibara Clicker</div>
+        </a>
+
+    </div>
+</body>
+</html>
